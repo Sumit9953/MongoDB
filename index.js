@@ -34,7 +34,14 @@ async function updateUser(userById , password){
 
 }
 
-updateUser('63ff078a40a10f1b0a681398',1234);
+async function Deleteuser(userById){
+    const user = await User.findById(userById);
+    user.deleteOne()
+}
+
+Deleteuser('63ff078a40a10f1b0a681398')
+
+// updateUser('63ff078a40a10f1b0a681398',1234);
 
 // findUser();
 
